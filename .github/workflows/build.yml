@@ -20,6 +20,7 @@ jobs:
       - name: Build the mod
         uses: geode-sdk/build-geode-mod@main
         with:
+          sdk: v5.0.0
           bindings: geode-sdk/bindings
           bindings-ref: main
           combine: true
