@@ -1,0 +1,47 @@
+{
+	"geode": "5.0.0",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"id": "yourname.fallback-song",
+	"name": "Fallback Song",
+	"version": "v1.0.0",
+	"developer": "YourName",
+	"description": "Plays your own song in a level if the original song is not installed.",
+	"settings": {
+		"enabled": {
+			"type": "bool",
+			"name": "Enable fallback song",
+			"default": true
+		},
+		"loop": {
+			"type": "bool",
+			"name": "Loop fallback song",
+			"default": true
+		},
+		"track-name": {
+			"type": "string",
+			"name": "Track name (from tracks folder)",
+			"description": "File name inside the mod's save folder /tracks, e.g. mysong.mp3. Easiest option on Android.",
+			"default": "fallback.mp3"
+		},
+		"song-file": {
+			"type": "file",
+			"name": "Fallback song file",
+			"description": "Optional file picker. Has priority over the track name. Leave empty to skip.",
+			"default": "",
+			"control": {
+				"dialog": "open",
+				"filters": [
+					{
+						"description": "Audio files",
+						"files": ["*.mp3", "*.ogg", "*.wav"]
+					}
+				]
+			}
+		}
+	}
+}
