@@ -65,10 +65,5 @@ class $modify(FallbackPlayLayer, PlayLayer) {
 		engine->stopAllMusic(true);
 		engine->playMusic(path.string(), loop, 0.f, 0);
 
-		// StartPos / practice checkpoint: jump to current level time
-		float t = m_gameState.m_levelTime;
-		if (t > 0.f) {
-			engine->setMusicTimeMMS(static_cast<unsigned int>(t * 1000.f), true, 0);
-		}
 	}
 };
